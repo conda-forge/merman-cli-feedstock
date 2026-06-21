@@ -35,8 +35,10 @@ requirements:
 
 tests:
   - script:
-      - merman-cli --help
-      - merman-cli --version
+      - if: build_platform == host_platform
+        then:
+          - merman-cli --help
+          - merman-cli --version
   - package_contents:
       bin:
         - merman-cli
