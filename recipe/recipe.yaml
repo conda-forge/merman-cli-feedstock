@@ -1,5 +1,5 @@
 context:
-  version: "0.7.0"
+  version: "0.8.0"
 
 package:
   name: merman-cli
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/Latias94/merman/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: e1d787154be74bca8262cc9c83ee3cb3f7e0c13dd4b8eb65c41cb2e42d3b5092
+  sha256: 900fcb1c947e886ba501f5b5663f89455724fe16c3623fa5bb30b116bec7e33a
 
 build:
-  number: 1
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_LTO: fat
