@@ -22,8 +22,8 @@ build:
       - let prefix = $env.LIBRARY_PREFIX? | default $env.PREFIX
       # build main app and generate license data
       - cd crates/merman-cli
-      - cargo auditable install --path=. --root=($prefix) --no-track --locked --bins
-      - cargo-bundle-licenses --format=yaml --output=../../THIRDPARTY.yml
+      - ^cargo auditable install --path=. --root=($prefix) --no-track --locked --bins
+      - ^cargo-bundle-licenses --format=yaml --output=../../THIRDPARTY.yml
       # copy shell completion files and man pages
       - mkdir ($prefix)/share/bash-completion/completions ($prefix)/share/fish/vendor_completions.d ($prefix)/share/zsh/site-functions ($prefix)/share/man/man1
       - cp assets/completions/merman-cli.bash ($prefix)/share/bash-completion/completions/merman-cli
